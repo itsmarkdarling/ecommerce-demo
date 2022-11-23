@@ -70,6 +70,7 @@ const PaymentForm = ({
       <Divider />
       <Typography variant="h6" gutterBottom style={{ margin: "20px 0" }}>
         Payment Method
+        <Typography variant="body2">For testing purposes, keep repeating 42 through all fields for credit card information (42424242...)</Typography>
       </Typography>
       <Elements stripe={stripePromise}>
         <ElementsConsumer>

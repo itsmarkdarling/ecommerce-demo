@@ -8,6 +8,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import { AddShoppingCart } from "@material-ui/icons";
+import { Link } from 'react-router-dom';
 
 import useStyles from './styles';
 
@@ -18,7 +19,7 @@ const Product = ({ product, onAddToCart }) => {
 
   return (
     <div>
-      <Card className={classes.root}>
+      <Card className={classes.root} elevation="8">
         <CardMedia
           className={classes.media}
           image={product.image.url}
@@ -34,6 +35,7 @@ const Product = ({ product, onAddToCart }) => {
           <Typography dangerouslySetInnerHTML={{ __html: product.description }} variant="body2" color="textSecondary" />
         </CardContent>
         <CardActions disableSpacing className={classes.cardActions}>
+        <Typography variant="body2">Add to cart</Typography>
           <IconButton aria-label="Add to Cart" onClick={() => onAddToCart(product.id, 1)}>
             <AddShoppingCart />
           </IconButton>

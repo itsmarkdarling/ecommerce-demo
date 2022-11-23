@@ -1,9 +1,11 @@
-import { makeStyles, fade } from '@material-ui/core/styles';
+import { makeStyles, alpha, createTheme } from '@material-ui/core/styles';
+import { blueGrey } from '@material-ui/core/colors';
 
 const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
+    backgroundColor: '#78909c',
     boxShadow: 'none',
     borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
     [theme.breakpoints.up('sm')]: {
@@ -32,9 +34,9 @@ export default makeStyles((theme) => ({
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,

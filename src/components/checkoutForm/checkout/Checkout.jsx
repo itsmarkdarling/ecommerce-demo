@@ -77,7 +77,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         </div>
         <br />
         <Button component={Link} to="/" variant="outlined" type="button">
-          Back to Home
+          Home
         </Button>
       </>
     ) : isFinished ? (
@@ -90,7 +90,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         </div>
         <br />
         <Button component={Link} to="/" variant="outlined" type="button">
-          Back to Home
+          Home
         </Button>
       </>
     ) : (
@@ -125,7 +125,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
       <CssBaseline />
       <div className={classes.toolbar} />
       <main className={classes.layout}>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} elevation="8">
           <Typography variant="h4" align="center">
             Checkout
           </Typography>
