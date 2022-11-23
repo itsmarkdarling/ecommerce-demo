@@ -1,3 +1,16 @@
+# E-Commerce Demo
+
+Credit Card information
+
+Enter the following credit card information for testing to submit the order (42 repeated):
+
+![image](https://user-images.githubusercontent.com/82232628/203449241-e7479550-d9d7-42ee-aa14-e6dcbd2df533.png)
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
