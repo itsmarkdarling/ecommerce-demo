@@ -1,0 +1,36 @@
+.expandmore {
+    width:4em !important;
+    height:4em !important;
+    opacity:0.5;
+    color:aliceblue;
+}
+
+.video {
+    position:absolute;
+    width:100%;
+    top: -1px;
+    left:0;
+    z-index:-99;
+}
+
+.title {
+    display:flex;
+    justify-content:center;
+    position:absolute;
+    top:60vh;
+    left:10vw;
+    height:8rem;
+    font-size:6vw;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width:890px) {
+    .title {
+        top:20vh;
+    }
+    .expandmore {
+        width:1.4rem !important;
+        height:1.4rem !important;
+    }
+}

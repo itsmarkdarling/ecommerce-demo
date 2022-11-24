@@ -1,11 +1,10 @@
-import { makeStyles, alpha, createTheme } from '@material-ui/core/styles';
-import { blueGrey } from '@material-ui/core/colors';
+import { makeStyles, alpha } from '@material-ui/core/styles';
 
 const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
-    backgroundColor: '#78909c',
+    backgroundColor: 'rgba(160, 190, 215, 0.6)',
     boxShadow: 'none',
     borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
     [theme.breakpoints.up('sm')]: {
