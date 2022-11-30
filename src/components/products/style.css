@@ -1,8 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .expandmore {
     width:4em !important;
     height:4em !important;
     opacity:0.5;
     color:aliceblue;
+}
+
+#products {
+    height:5rem;
+    background-color:#fff;
 }
 
 .video {

@@ -1,9 +1,10 @@
 import React from "react";
-import { Container, Typography, Button, Grid, Paper } from "@material-ui/core";
+import { Container, Typography, Button, Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 import useStyles from "./styles";
 import CartItem from "./cartItem/CartItem";
+
 
 const Cart = ({
   cart,
@@ -11,6 +12,7 @@ const Cart = ({
   handleRemoveFromCart,
   handleEmptyCart,
 }) => {
+  console.log(cart)
   const classes = useStyles();
 
   const EmptyCart = () => (
@@ -21,6 +23,14 @@ const Cart = ({
       </Link>
       !
     </Typography>
+  );
+
+  const Item = () => (
+    <span>Item</span>
+  );
+
+  const Items = () => (
+    <span>Items</span>
   );
 
   const FilledCart = () => (
@@ -37,8 +47,8 @@ const Cart = ({
         ))}
       </Grid>
       <div className={classes.cardDetails}>
-        <Typography variant="h4">
-          Subtotal: {cart.subtotal.formatted_with_symbol}
+        <Typography variant="h6">
+          Subtotal:<br /> ({cart.total_items} {cart.total_items > 1 ? <Items /> : <Item />}) {cart.subtotal.formatted_with_symbol}
         </Typography>
         <div>
           <Button
@@ -72,7 +82,7 @@ const Cart = ({
   return (
     <Container>
       <div className={classes.toolbar} />
-      <Typography className={classes.title} variant="h3" gutterBottom>
+      <Typography className={classes.title} variant="h5" gutterBottom>
         Your Shopping Cart
       </Typography>
       {!cart.line_items.length ? <EmptyCart /> : <FilledCart />}

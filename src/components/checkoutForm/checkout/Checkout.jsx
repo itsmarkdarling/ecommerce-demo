@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Paper,
   Stepper,
@@ -27,7 +27,6 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   const [shippingData, setShippingData] = useState({});
   const [isFinished, setIsFinished] = useState(false);
   const classes = useStyles();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const generateToken = async () => {
@@ -125,7 +124,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
       <CssBaseline />
       <div className={classes.toolbar} />
       <main className={classes.layout}>
-        <Paper className={classes.paper} elevation="8">
+        <Paper className={classes.paper} elevation={8}>
           <Typography variant="h4" align="center">
             Checkout
           </Typography>

@@ -18,10 +18,7 @@ const Navbar = ({ totalItems }) => {
 
   return (
     <>
-      <AppBar
-        position="fixed"
-        className={classes.appBar}
-      >
+      <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography
             component={Link}
