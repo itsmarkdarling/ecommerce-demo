@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { commerce } from "./lib/commerce";
 import { Products, Navbar, Cart, Checkout } from "./components";
-import ProductDetail from './components/products/Product/product-description/ProductDetail';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Backdrop, CircularProgress } from "@material-ui/core";
 import useStyles from "./styles";
@@ -109,12 +108,6 @@ const App = () => {
                 onCaptureCheckout={handleCaptureCheckout}
                 error={errorMessage}
               />
-            }
-          />
-          <Route
-            path="/productdetail"
-            element={
-              <ProductDetail products={products} onAddToCart={handleAddToCart} />
             }
           />
         </Routes>

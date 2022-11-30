@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link, Route, Routes } from "react-router-dom";
 import {
   Card,
   CardMedia,
@@ -20,17 +19,6 @@ const Product = ({ product, onAddToCart, handleAddToCart }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  // const CartMessage = () => (
-  //   <Modal onClose={handleClose}>
-  //     <div>
-  //       <Paper>
-  //         <Typography variant="h5">Added to Cart</Typography>
-  //         <CloseIcon onClick={handleClose} className={classes.close} />
-  //       </Paper>
-  //     </div>
-  //   </Modal>
-  // );
 
   const ProductDetails = () => (
     <Modal className={classes.modal} open={open} onClose={handleClose} aria-labelledby="Product Details">
